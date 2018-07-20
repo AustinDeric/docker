@@ -26,5 +26,9 @@ RUN apt-get update && apt-get install -y \
     python-rosinstall-generator \
     python-wstool \
     build-essential \
+    python-pip\
     && rm -rf /var/lib/apt/lists/*
 
+RUN pip install --upgrade pip
+
+RUN pip install -U catkin_tools
